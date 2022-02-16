@@ -61,6 +61,38 @@ function pulseAnimation(
   ];
 }
 
+class Sound {
+    constructor(src) {
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+    }
+
+    play = function(){
+        this.sound.play();
+    }
+
+    stop = function(){
+        this.sound.pause();
+    }
+
+    load = function(){
+        this.sound.load();
+    }
+}
+
+let sound = new Sound("beep.wav")
+
+receiveBall.addEventListener("click",()=>{
+    console.log("SHOULdplay ")
+})
+
+
+
+
 let timeout = idleAnimation(1);
 function idleAnimation(end) {
   const duration = 3000;
@@ -75,7 +107,7 @@ function idleAnimation(end) {
 let transmiting = false;
 startbutton.addEventListener("click", () => {
     fadeButtonOut();
-    changeBallColor("rgb(213, 176, 56)");
+    changeBallColor("rgb(255, 176, 68)");
     if (!transmiting) {
       transmiting = true;
       clearInterval(timeout);
@@ -92,8 +124,11 @@ startbutton.addEventListener("click", () => {
           let currentbit = 0;
           let morsePulseTimeout = setInterval(() => {
             console.log(morseCode[currentbit]);
-            if (morseCode[currentbit] === 1) receiveBall.animate(...animation);
-            else if (currentbit >= morseCode.length) {
+            if (morseCode[currentbit] === 1) {
+                receiveBall.animate(...animation) 
+                sound.play();
+                setTimeout(()=> sound.load(), 200)
+            } else if (currentbit >= morseCode.length) {
               changeBallColor("#fff")
               clearInterval(morsePulseTimeout);
               timeout = idleAnimation(0.7);

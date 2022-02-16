@@ -5,7 +5,8 @@ body {
 }
 
 .receiveBall {
-  margin-top: 200px;
+  position: absolute;
+  top: 30%;
   width: 100px;
   height: 100px;
   background-color:white;
@@ -38,10 +39,10 @@ body {
 }
 
 .startbutton {
-  color: rgb(213, 176, 56);
+  color:rgb(255, 176, 68);
   padding: 10px 3px 10px 30px;
   border-radius: 10%;
-  border: 2px solid rgb(213, 176, 56);
+  border: 2px solid rgb(255, 176, 68);
   position: absolute;
   background-color: #000;
   padding-left: 2px;
