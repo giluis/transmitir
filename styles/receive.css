@@ -16,14 +16,6 @@ body {
   text-align: center;
 }
 
-.animate {
-  animation-name: oscilatesize;
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 .receiveBall p {
   align-self: center;
 }
@@ -61,19 +53,4 @@ body {
   width: 43%;
   top: 70%;
   font-size: 20px;
-}
-
-@keyframes oscilatesize {
-  0% {
-    width: 200px;
-    height: 200px;
-  }
-  50% {
-    width: 251px;
-    height: 251px;
-  }
-  100% {
-    width: 200px;
-    height: 200px;
-  }
 }
