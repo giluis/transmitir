@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+
+.receiveBall {
+  margin-top: 200px;
+  width: 100px;
+  height: 100px;
+  background-color:white;
+  align-self: center;
+  border: solid 2px black;
+  border-radius: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.animate {
+  animation-name: oscilatesize;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.receiveBall p {
+  align-self: center;
+}
+
+.diminish {
+  animation-name: diminish;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes diminish {
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0.7);
+  }
+}
+
+.startbutton {
+  color: rgb(213, 176, 56);
+  padding: 10px 3px 10px 30px;
+  border-radius: 10%;
+  border: 2px solid rgb(213, 176, 56);
+  position: absolute;
+  background-color: #000;
+  padding-left: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 43%;
+  top: 70%;
+  font-size: 20px;
+}
+
+@keyframes oscilatesize {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  50% {
+    width: 251px;
+    height: 251px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
