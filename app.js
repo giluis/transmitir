@@ -1,8 +1,3 @@
-function App() {
-  return "< \
-    sdlfkjlkj ";
-}
-
 const receiveBall = document.querySelector(".receiveBall");
 const startbutton = document.querySelector(".startbutton");
 
@@ -85,12 +80,6 @@ class Sound {
 }
 
 let sound = new Sound("beep.wav")
-
-receiveBall.addEventListener("click",()=>{
-    console.log("SHOULdplay ")
-})
-
-
 
 
 let timeout = idleAnimation(1);
