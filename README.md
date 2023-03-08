@@ -1,6 +1,7 @@
 # What's this?
-A small web page designed show a morse code message to a loved one.
-The message is hardcoded in [app.js](./app.js) in the global var `message`.
+A small web page designed show a morse code message to a loved one.  
+You can use it [here](https://giluis.github.io/transmitir)  
+The message is hardcoded in [app.js](./app.js) in the global var `message`.  
 
 # TODO
 - [ ] Have a `create` page that allows creating a message and sending the link to the transmission to a loved one
