@@ -1,6 +1,6 @@
 # What's this?
 A small web page designed show a morse code message to a loved one.  
-You can use it [here](https://giluis.github.io/transmitir)  
+You can use it [here](https://giluis.github.io/transmitir){target = "_blank"}  
 The message is hardcoded in [app.js](./app.js) in the global var `message`.  
 
 # TODO
